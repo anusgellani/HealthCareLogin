@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Healthcare Login System</title>            
+  <link rel="stylesheet" href="style.css" />            
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body> 
+  <header class="hero-section">
+    <div class="hero-overlay">
+      <div class="header-container">
+        <h1>Welcome to the Healthcare Login System</h1>
+        <p>Secure access to medical records and patient management</p>
+        <a href="doctor-login.html" class="hero-cta">Get Started <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <nav>      
+    <ul>
+      <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="patient-registration.html"><i class="fas fa-user-plus"></i> Patient Registration</a></li>
+      <li><a href="doctor-login.html"><i class="fas fa-user-md"></i> Doctor & Staff Login</a></li>
+      <li><a href="login-verification.html"><i class="fas fa-shield-alt"></i> Login Verification</a></li>
+      <li><a href="database-management.html"><i class="fas fa-database"></i> Patient Database</a></li>
+      <li><a href="admin-panel.html"><i class="fas fa-cog"></i> Admin Panel</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="about-section">
+      <h2>About the System</h2>
+      <div class="features">
+        <div class="feature-card">
+          <img src="images/secure-access.jpg" alt="Secure Access" class="feature-img">
+          <h3>Secure Access</h3>
+          <p>Role-based authentication ensures only authorized personnel can access sensitive data.</p>
+        </div>
+        <div class="feature-card">
+          <img src="images/patient-management.jpg" alt="Patient Management" class="feature-img">
+          <h3>Patient Management</h3>
+          <p>Comprehensive patient records with all necessary medical information.</p>
+        </div>
+        <div class="feature-card">
+          <img src="images/analytics.jpg" alt="Analytics" class="feature-img">
+          <h3>Analytics</h3>
+          <p>Generate reports and analyze patient data for better healthcare outcomes.</p>
+        </div>
+      </div>
+      
+      <div class="system-description">
+        <p>
+          This system is designed for hospitals and clinics to ensure secure and fast access to patient records. The goal is to maintain privacy and authorization control across all levels of healthcare operations.
+        </p>
+        <p>
+          Each module is interconnected but also works individually to deliver a secure and scalable system. Explore our modules below.
+        </p>
+      </div>
+    </section>
+
+    <section class="carousel-section">
+      <h2>Our Healthcare Services</h2>
+      <div class="carousel-container">
+        <div class="carousel-slide active">
+          <img src="images/hospital.jpg" alt="Hospital Services">
+          <div class="carousel-caption">Advanced Hospital Care</div>
+        </div>
+        <div class="carousel-slide">
+          <img src="images/doctor.jpg" alt="Doctor Consultation">
+          <div class="carousel-caption">Expert Doctor Consultations</div>
+        </div>
+        <div class="carousel-slide">
+          <img src="images/patient-care.jpg" alt="Patient Care">
+          <div class="carousel-caption">Dedicated Patient Care</div>
+        </div>
+        <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </section>
+    
+    <section class="stats-section">
+      <h2>System Statistics</h2>
+      <div class="stats-container">
+        <div class="stat-card">
+          <span id="patientCount">0</span>
+          <p>Patients Registered</p>
+        </div>
+        <div class="stat-card">
+          <span id="doctorCount">0</span>
+          <p>Medical Staff</p>
+        </div>
+        <div class="stat-card">
+          <span id="appointmentCount">0</span>
+          <p>Daily Appointments</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p><i class="fas fa-envelope"></i> support@healthcare-system.com</p>
+        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="patient-registration.html">Patient Registration</a></li>
+          <li><a href="doctor-login.html">Staff Login</a></li>
+          <li><a href="admin-panel.html">Admin Panel</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Healthcare Login System. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+  <header class="hero-section hero-admin">
+    <div class="hero-overlay">
+      <div class="header-container">
+        <h1>Admin Panel</h1>
+        <p>System administration and configuration</p>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="patient-registration.html"><i class="fas fa-user-plus"></i> Patient Registration</a></li>
+      <li><a href="doctor-login.html"><i class="fas fa-user-md"></i> Doctor & Staff Login</a></li>
+      <li><a href="login-verification.html"><i class="fas fa-shield-alt"></i> Login Verification</a></li>
+      <li><a href="database-management.html"><i class="fas fa-database"></i> Patient Database</a></li>
+      <li><a href="admin-panel.html"><i class="fas fa-cog"></i> Admin Panel</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="admin-container">
+      <div class="admin-sidebar">
+        <div class="admin-profile">
+          <div class="profile-image">
+            <i class="fas fa-user-shield"></i>
+          </div>
+          <h3>Admin User</h3>
+          <p>System Administrator</p>
+        </div>
+
+        <ul class="admin-menu">
+          <li class="active" onclick="showAdminSection('dashboard')">
+            <i class="fas fa-tachometer-alt"></i> Dashboard
+          </li>
+          <li onclick="showAdminSection('users')">
+            <i class="fas fa-users-cog"></i> User Management
+          </li>
+          <li onclick="showAdminSection('reports')">
+            <i class="fas fa-chart-pie"></i> Reports
+          </li>
+          <li onclick="showAdminSection('settings')">
+            <i class="fas fa-sliders-h"></i> System Settings
+          </li>
+          <li onclick="showAdminSection('audit')">
+            <i class="fas fa-clipboard-list"></i> Audit Logs
+          </li>
+          <li onclick="showAdminSection('backup')">
+            <i class="fas fa-database"></i> Backup & Restore
+          </li>
+        </ul>
+      </div>
+
+      <div class="admin-content">
+        <div id="adminDashboard" class="admin-section">
+          <h2><i class="fas fa-tachometer-alt"></i> Admin Dashboard</h2>
+          <p>The admin can manage all records here including doctors, nurses, and patients.</p>
+
+          <div class="admin-stats" id="dashboardStats">
+            <!-- Dynamic stats will be inserted here by JavaScript -->
+          </div>
+
+          <div class="admin-quick-actions">
+            <h3>Quick Actions</h3>
+            <div class="actions-grid">
+              <button class="action-btn" onclick="manageUsers()">
+                <i class="fas fa-user-plus"></i>
+                <span>Add User</span>
+              </button>
+              <button class="action-btn" onclick="generateReports()">
+                <i class="fas fa-file-export"></i>
+                <span>Generate Report</span>
+              </button>
+              <button class="action-btn" onclick="createAppointment()">
+                <i class="fas fa-calendar-plus"></i>
+                <span>Create Appointment</span>
+              </button>
+              <button class="action-btn" onclick="sendNotification()">
+                <i class="fas fa-envelope"></i>
+                <span>Send Notification</span>
+              </button>
+              <button class="action-btn" onclick="backupDatabase()">
+                <i class="fas fa-database"></i>
+                <span>Backup Database</span>
+              </button>
+              <button class="action-btn" onclick="showAdminSection('settings')">
+                <i class="fas fa-cog"></i>
+                <span>System Settings</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="adminUsers" class="admin-section" style="display:none;">
+          <h2><i class="fas fa-users-cog"></i> User Management</h2>
+          <div id="userManagementContent">
+            <!-- User management content will be inserted here -->
+          </div>
+        </div>
+
+        <div id="adminReports" class="admin-section" style="display:none;">
+          <h2><i class="fas fa-chart-pie"></i> Reports</h2>
+          <div id="reportContent">
+            <!-- Report content will be inserted here -->
+          </div>
+        </div>
+
+        <div id="adminSettings" class="admin-section" style="display:none;">
+          <h2><i class="fas fa-sliders-h"></i> System Settings</h2>
+          <div id="settingsContent">
+            <p>Configure system settings here.</p>
+            <button onclick="saveSettings()">Save Settings</button>
+          </div>
+        </div>
+
+        <div id="adminAudit" class="admin-section" style="display:none;">
+          <h2><i class="fas fa-clipboard-list"></i> Audit Logs</h2>
+          <div id="auditContent">
+            <!-- Audit logs will be inserted here -->
+          </div>
+        </div>
+
+        <div id="adminBackup" class="admin-section" style="display:none;">
+          <h2><i class="fas fa-database"></i> Backup & Restore</h2>
+          <div id="backupContent">
+            <button onclick="createBackup()">Create Backup</button>
+            <button onclick="restoreBackup()">Restore Backup</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="adminActions" class="admin-modal-container">
+      <!-- Modal content will appear here -->
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>© 2025 Healthcare Login System</p>
+      <p class="back-link"><a href="index.html"><i class="fas fa-arrow-left"></i> Back to Home</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

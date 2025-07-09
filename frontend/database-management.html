@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Patient Database Management</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header class="hero-section hero-database">
+    <div class="hero-overlay">
+      <div class="header-container">
+        <h1>Patient Database Management</h1>
+        <p>Manage and view patient records securely</p>
+      </div>
+    </div>
+  </header>
+
+  <nav>      
+    <ul>
+      <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="patient-registration.html"><i class="fas fa-user-plus"></i> Patient Registration</a></li>
+      <li><a href="doctor-login.html"><i class="fas fa-user-md"></i> Doctor & Staff Login</a></li>
+      <li><a href="login-verification.html"><i class="fas fa-shield-alt"></i> Login Verification</a></li>
+      <li><a href="database-management.html"><i class="fas fa-database"></i> Patient Database</a></li>
+      <li><a href="admin-panel.html"><i class="fas fa-cog"></i> Admin Panel</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="database-container">
+      <div class="database-info">
+        <h2>Patient Database</h2>
+        <p>View and manage all patient records securely with advanced search and filter options.</p>
+      </div>
+      
+      <div class="database-controls">
+        <div class="search-container">
+          <input type="text" id="patientSearch" placeholder="Search patients by name or ID...">
+          <button class="btn-search"><i class="fas fa-search"></i> Search</button>
+        </div>
+        <div class="filter-container">
+          <label for="genderFilter">Filter by Gender:</label>
+          <select id="genderFilter">
+            <option value="">All</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
+          <button class="btn-filter"><i class="fas fa-filter"></i> Filter</button>
+        </div>
+      </div>
+      
+      <div class="database-table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Gender</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="patientTableBody">
+            <!-- Populated by JavaScript -->
+          </tbody>
+        </table>
+        <div class="table-footer">
+          <div class="records-info">Showing <span id="recordCount">0</span> of <span id="totalRecords">0</span> records</div>
+          <div class="pagination">
+            <button class="btn-pagination" id="prevPage"><i class="fas fa-chevron-left"></i></button>
+            <button class="btn-pagination active">1</button>
+            <button class="btn-pagination">2</button>
+            <button class="btn-pagination" id="nextPage"><i class="fas fa-chevron-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>© 2025 Healthcare Login System</p>
+      <p class="back-link"><a href="index.html"><i class="fas fa-arrow-left"></i> Back to Home</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

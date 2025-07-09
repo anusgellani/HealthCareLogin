@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Patient Registration</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header class="hero-section hero-patient">
+    <div class="hero-overlay">
+      <div class="header-container">
+        <h1>Patient Registration Module</h1>
+        <p>Register new patients into the healthcare system</p>
+      </div>
+    </div>
+  </header>
+
+  <nav>      
+    <ul>
+      <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="patient-registration.html"><i class="fas fa-user-plus"></i> Patient Registration</a></li>
+      <li><a href="doctor-login.html"><i class="fas fa-user-md"></i> Doctor & Staff Login</a></li>
+      <li><a href="login-verification.html"><i class="fas fa-shield-alt"></i> Login Verification</a></li>
+      <li><a href="database-management.html"><i class="fas fa-database"></i> Patient Database</a></li>
+      <li><a href="admin-panel.html"><i class="fas fa-cog"></i> Admin Panel</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="registration-container">
+      <form id="patientForm" class="registration-form">
+        <div class="form-header">
+          <h2>New Patient Information</h2>
+          <p>Please fill all fields accurately</p>
+        </div>
+        
+        <div class="form-group">
+          <label for="pname">Full Name:</label>
+          <input type="text" id="pname" required placeholder="John Doe" />
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" required min="0" max="120" placeholder="30" />
+          </div>
+          
+          <div class="form-group">
+            <label for="gender">Gender:</label>
+            <select id="gender" required>
+              <option value="">Select Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+              <option value="Prefer not to say">Prefer not to say</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" required placeholder="patient@example.com" />
+        </div>
+        
+        <div class="form-group">
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" required placeholder="03001234567" pattern="[0-9]{11}" />
+        </div>
+        
+        <div class="form-group">
+          <label for="address">Address:</label>
+          <textarea id="address" required placeholder="123 Main Street, City"></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label for="medicalHistory">Medical History (if any):</label>
+          <textarea id="medicalHistory" placeholder="Any known allergies, chronic conditions, etc."></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label for="insurance">Insurance Provider:</label>
+          <input type="text" id="insurance" placeholder="Insurance company name (if applicable)" />
+        </div>
+        
+        <div class="form-actions">
+          <button type="submit" class="btn-submit">
+            <i class="fas fa-save"></i> Register Patient
+          </button>
+          <button type="reset" class="btn-reset">
+            <i class="fas fa-undo"></i> Clear Form
+          </button>
+        </div>
+      </form>
+      
+      <div id="patientOutput" class="output-container">
+        <h3>Registration Status</h3>
+        <div class="output-content">
+          <p>No patient registered yet. Fill the form to register a new patient.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>© 2025 Healthcare Login System</p>
+      <p class="back-link"><a href="index.html"><i class="fas fa-arrow-left"></i> Back to Home</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
